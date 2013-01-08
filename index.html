@@ -1,0 +1,48 @@
+---
+layout: default
+title: Miles Sandlar on the Internets
+---
+{% for post in paginator.posts %}
+
+		{% if forloop.last %}
+		<div class="post last">
+			{% else %}
+			<div class="post">
+		{% endif %}
+
+
+		<h2><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+		<div class="date">Published by <a href="#">Miles Sandlar</a> on {{ post.date | date: "%B %d, %Y" }} at {{ post.time }}</div>
+		<div class="content">
+			{{ post.content }}
+
+			<a href="{{ post.url }}">Permalink</a>
+		</div>
+	</div>
+	{% endfor %} 
+
+	<div id="pagination">
+
+
+	{% if paginator.previous_page %}
+		{% if paginator.previous_page == 1 %}
+			<a href="/">Newer Posts</a>
+		{% else %}
+			<a href="/{{ paginator.previous_page }}">Newer Posts</a>
+		{% endif %}
+	{% endif %}
+
+
+	
+	{% if paginator.next_page%}
+		{% if paginator.previous_page%}
+			// 
+		{% endif %}
+	{% endif %}
+	
+	{% if paginator.next_page%}
+			<a href="/{{ paginator.next_page }}">Older Posts</a> 
+	{% endif %}
+
+
+</div>
