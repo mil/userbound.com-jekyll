@@ -1,0 +1,3 @@
+[submodule "ui/mil-edit"]
+	path = ui/mil-edit
+	url = git://github.com/mil/mil-edit
