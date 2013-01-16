@@ -7,7 +7,7 @@ There are likely thousands of TODO list "applications" and "systems" out there, 
 
 In your **.bashrc** or **.zshrc**:
 <pre class="sh_c">
-cat ~/.TODO
+cat &tilde;/.TODO
 </pre>
 
 Then just maintain a file in your home directory called **.TODO** with all the things you need to do. 
