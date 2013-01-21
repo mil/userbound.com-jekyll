@@ -6,6 +6,7 @@ time: 11:35AM
 There are likely thousands of TODO list "applications" and "systems" out there, however, I think we've forgotten the most simple and elegent solution:
 
 In your **.bashrc** or **.zshrc**:
+
 <pre class="sh_c">
 cat &tilde;/.TODO
 </pre>

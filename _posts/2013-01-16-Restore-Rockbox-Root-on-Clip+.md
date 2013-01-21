@@ -27,6 +27,7 @@ mv .rockbox /mnt/clip
 </pre>
 
 Then, patch and copy over the bootloader the manual way (GUI didn't work for me):
+
 <pre class="sh_c">
 wget http://mp3support.sandisk.com/firmware/clipplus/clipplus01.02.16.zip
 wget http://download.rockbox.org/bootloader/sandisk-sansa/clipplus/bootloader-clipplus.sansa
