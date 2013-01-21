@@ -3,8 +3,38 @@ layout: projects
 title: Projects
 time: 3:20AM
 ---
-## Personal Projects
-Below are writeups for some of my projects. I use this area for discussing the rationale (from a usability and pragmatic view) of each project. Accompanying source for each project can be found on my [GitHub](https://github.com/mil).
+## Interface Design Projects
+Below are writeups for some of my interfaces I make. I use this area for discussing the rationale (from a usability and pragmatic view) of each project. Accompanying source for each project can be found on my [GitHub](https://github.com/mil).
+
+
+
+<hr class="project" />
+
+### [Mil Edit](/ui/mil-edit)
+<a href="/ui/mil-edit" title="Mil Edit"><img src="/images/mil-edit.png" alt="Mil Edit" class='project-image' /></a>
+A new kind of way to edit Markdown lists in the browser. An alternative to invalid-markup-generating WYSIYG editors. Solid keybindings, import and export markdown functions. Buttons and keybindings call same set of functions.
+
+[Demo](/ui/mil-edit)&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;[GitHub Repository](https://github.com/mil/mil-edit)
+
+
+
+### [Foo Window Manger](http://github.com/mil/foo-wm)
+<a href="http://github.com/mil/foo-wm" title="Keyboard Tiler"><img src="/images/foo-wm.png" alt="Keyboard Tiler" class='project-image' /></a>
+My most prolific project to date, foo-wm is a minimalistic window manager for X11 that: organize all windows in a tree and provides a simple DSL for transversing and manipulating the tree. This is my primary window manager on a day to day basis.
+
+[GitHub Repository](https://github.com/mil/foo-wm)&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;[AUR PKGBUILD](http://aur.archlinux.org/packages/foo-wm-git)
+
+
+<hr class="project" />
+
+### [MTA Subway CLI](https://github.com/jns2/mta-subway-cli)
+<a href="https://github.com/jns2/mta-subway-cli" title="Keyboard Tiler"><img src="/images/mta-subway-cli.png" alt="Keyboard Tiler" class='project-image' /></a>
+During my time at [Hackerschool](http://hackerschool.com), while living in NYC, I became quite acquainted with riding the subways. This is a small CLI that I and [Arjan Sign](http://github.com/jns2) made to determine MTA Subway departure times given any station.
+
+[GitHub Repository](https://github.com/jns2/mta-subway-cli)
+
+
+
 
 <hr class="project" />
 
