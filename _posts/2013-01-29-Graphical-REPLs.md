@@ -5,7 +5,7 @@ time: 12:30AM
 ---
 Where are all the Graphical Read Evaluate Print Loop Interfaces? Where is the graphical shell? There was [TermKit](http://github.com/unconed/TermKit) a bit back, but TermKit relied on Node.JS plus Webkit.. which was a fragile solution. Though, conceptually, TermKit was right on target.  But what might the "ideal" graphical REPL look like? 
 
-Is a *HTML DOM tree* styled with CSS adequate to represent *any* output?  Does it make sense to wrap it all in Webkit? How do we hook into files?
+Is a HTML DOM tree styled with CSS adequate to represent *any* output?  Does it make sense to wrap it all in Webkit? How do we hook into files?
 
 Or: 
 
