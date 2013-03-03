@@ -3,7 +3,7 @@ layout: about
 title: About
 ---
 ## Mil <span class="small">(Miles Sandlar)</span>
-I'd best label myself as a **minimalist hacker**. I do a little bit of everything from design to code. Basically, I just like trying to figure out how to make life and software simpler. I'm currently an undergraduate student at [Virginia Tech](http://www.vt.edu). I'll be graduating soon with a BS in **Psychology** and a BA in **Philosophy**. Also, perhaps a minor in **Industrial Design**.
+I'd best label myself as a **minimalist hacker**. I do a little bit of everything from design to code. Basically, I just like trying to figure out how to make life and software simpler. I'm currently an undergraduate student at [Virginia Tech](http://www.vt.edu). I'll be graduating soon with a BS in **Psychology**, a BA in **Philosophy**, and a minor in **Industrial Design**.
 
 I have a lot of software interests, most of which revolve around minimalism and usability. My biggest technical interests currently are in: **C**, **Io**, **Javascript**, and **Ruby**. I'm big advocate of **\*NIX** for personal and desktop use. I'm also a big advocate of the open-source movement.  My latest major open-source projects are: a window manager for X called [Foo WM](http://github.com/mil/foo-wm) and a Markdown list editor for the browser called [mil edit](http://github.com/mil/mil-edit).
 
