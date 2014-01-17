@@ -1,4 +1,4 @@
-auto: true
 permalink: blog/:title
 paginate: 3
+paginate_path: "page:num"
 pygments: false
