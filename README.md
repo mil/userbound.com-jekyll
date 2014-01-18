@@ -1,3 +1,3 @@
 userbound.com
 ==============
-This is the Jekyll template that powers [userbound.com](userbound.com).
+Source to generate [userbound.com](userbound.com).
