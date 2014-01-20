@@ -19,7 +19,6 @@ h2 {
 	padding-bottom: 10px;
 	font-size: 33px;
 	line-height: 40px;
-	font-family: Helvetiker;
 	color: #000000;
 }
 
@@ -116,19 +115,25 @@ div.header {
   border-bottom: 1px solid #e8e8e8;
   padding-bottom: 10px;
   margin-bottom: 20px;
+  clear: both;
+  overflow: hidden;
 }
 
-
-div.header a {
-  color: black;
-  font-size: 14px;
+div.header .links {
+  display: inline-block;
+  border-right: 1px dotted #cfcfcf;
+  padding-right: 10px;
 }
 
-div.header a h1 {
-	margin-bottom: 0;
-	padding-bottom: 0;
-	line-height: 60px;
+div.header .links a {
+  font-size: 12px;
 }
+div.header .links a.a { color: #000000; }
+div.header .links a.b { color: #2f2f2f; }
+div.header .links a.c { color: #6f6f6f; }
+div.header .links a.d { color: #2f2f2f; }
+div.header .links a.e { color: #000000; }
+
 
 /* Content Bars */
 
@@ -136,6 +141,27 @@ div#main-content {
 	clear: both;
 	overflow: hidden;
 }
+
+.projects {
+  padding: 0;
+}
+
+.projects h2 {
+  margin: 0;
+  padding-left: 10px;
+  padding-bottom: 0;
+  display: inline-block;
+  color: #292929;
+  font-weight: normal;
+  font-size: 12px;
+}
+.projects ul {
+  padding-left: 20px;
+  font-size:14px;
+}
+
+
+
 /* End of Content Bars */
 
 
@@ -143,6 +169,7 @@ div#main-content {
 div.footer {
 	font-size: 12px;
   border-top: 1px solid #e8e8e8;
+  margin-top: 20px;
 	padding-top: 10px;
 }
 div.footer .copyright {
@@ -150,6 +177,9 @@ div.footer .copyright {
   padding-right: 10px;
   margin-right: 10px;
   display: inline-block;
+}
+div.footer .return {
+  float: right;
 }
 
 
