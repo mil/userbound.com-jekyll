@@ -65,6 +65,12 @@ a {
 	text-decoration: none;
 }
 
+.additional {
+  font-size: 8px;
+  display: inline-block;
+  padding: 0 5px;
+}
+
 a:hover {
 	color: #5889e3;
 	text-decoration: underline;
