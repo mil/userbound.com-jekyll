@@ -332,5 +332,10 @@ pre {
   font-size:14px;
 }
 
-
-
+.projects .additional {
+  display: inline-block;
+  padding-left: 3px;
+}
+.projects .additional a {
+  font-size: 8px;
+}
