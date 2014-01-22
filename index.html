@@ -2,47 +2,87 @@
 layout: default
 title: Miles Sandlar on the Internets
 ---
-{% for post in paginator.posts %}
-
-		{% if forloop.last %}
-		<div class="post last">
-			{% else %}
-			<div class="post">
-		{% endif %}
 
 
-		<h2><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
-		<div class="date">Published by <a href="#">Miles Sandlar</a> on {{ post.date | date: "%B %d, %Y" }} at {{ post.time }}</div>
-		<div class="content">
-			{{ post.content }}
+<div class='projects'>
+  <h2>Web</h2>
+  <ul class="section">
+    <li>
+    <a target="_blank" href="/ui/mil-edit">Mil Edit</a> - 
+    An embeddable Markdown list editor with a responsive feel. 
+    </li>
 
-			<a href="{{ post.url }}">Permalink</a>
-		</div>
-	</div>
-	{% endfor %} 
+    <li><a target="_blank" href="/ui/sol-engage">SOL Engage</a> - 
+    Conceptual <a class="blend" target="_blank" title="That's me! Behind those pizza boxes!" href="http://www.apps4va.org/1/post/2012/10/hac4edu-ends-with-a-bang.html">hackathon-winning</a> test taking interface for the SOL.
+    </li>
 
-	<div id="pagination">
+    <li>
+    <a target="_blank" href="http://markdown-tree.bladdo.net">Markdown Tree</a> - 
+    Serve a hierarchy/tree of Markdown files as a live styled site.
+    </li>
+
+    <li>
+    <a target="_blank" href="/projects/userbound">Userbound</a> - 
+    Conceptual multi-user Internet browser.
+    </li>
+
+    <li>
+    <a target="_blank" href="http://asciiw.com" >Asciiw</a> -
+    Your homecrafted weather report, animated in ASCII.
+    </li>
+  
+  </ul>
 
 
-	{% if paginator.previous_page %}
-		{% if paginator.previous_page == 1 %}
-			<a href="/">Newer Posts</a>
-		{% else %}
-			<a href="/{{ paginator.previous_page }}">Newer Posts</a>
-		{% endif %}
-	{% endif %}
+  <h2>CLI</h2>
+  <ul class="section">
 
+    <li>
+    <a target="_blank" href="http://github.com/jns2/mta-subway-cli" >MTA Subway CLI</a> -
+    A command-line-interface for the NYC MTA Subways.
+    </li>
 
-	
-	{% if paginator.next_page%}
-		{% if paginator.previous_page%}
-			// 
-		{% endif %}
-	{% endif %}
-	
-	{% if paginator.next_page%}
-			<a href="/{{ paginator.next_page }}">Older Posts</a> 
-	{% endif %}
+    <li>
+    <a target="_blank" href="http://github.com/mil/virginia-tech-hacks" >Virginia Tech Hacks</a> -
+    Various command line tools for students at Virginia Tech.
+    </li>
+    
+    <li>
+    <a target="_blank" href="http://github.com/mil/kb-loops" >Kb Loops</a> -
+    The most low-fidelity UNIXy soundboard &amp; looper you'll ever find.
+    </li>
 
+  </ul>
+
+  <h2>X</h2>
+  <ul class="section">
+    <li>
+    <a target="_blank" href="http://github.com/mil/foo-wm" >Foo Window Manger</a> -
+    Tree, zooming WM that I built and use daily.
+    </li>
+
+    <li>
+    <a target="_blank" href="http://github.com/mil/keyboard-tiler" >Keyboard Tiler</a> -
+    Tiling for floating WMs via the keyboard as visual rep.
+    </li>
+  </ul>
+
+  <h2>Misc</h2>
+  <ul class="section">
+    <li>
+    <a target="_blank" href="http://github.com/mil/home">Home</a> -
+    Just clone this repository to get my exact setup.
+    </li>
+
+    <li>
+    <a target="_blank" href="http://github.com/mil/home/tree/master/Scripts">Scripts</a> -
+    Regular patchwork, hacking, lots of hidden gems.
+    </li>
+
+    <li>
+    <a target="_blank" href="http://github.com/mil/PKGBUILD">PKGBUILDs</a> -
+    Collection of my Arch Linux AUR PKGBUILDs.
+    </li>
+  </ul>
 
 </div>
