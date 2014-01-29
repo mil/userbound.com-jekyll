@@ -1,4 +1,10 @@
-<title>{{ page.title || post.title }} | userbound</title>
+<title>
+  {% if page.title != "Miles Sandlar" %}
+  {{ page.title }} | Miles Sandlar
+  {% else %}
+  Miles Sandlar
+  {% endif %}
+</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <link rel="icon" href="/style/images/favicon.ico" />

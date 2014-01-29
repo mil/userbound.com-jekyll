@@ -14,9 +14,9 @@ h1,h2,h3,h4,h5,h6 {
 	font-weight: normal;
 }
 h2 {
-	margin: 20px 0;
+	margin: 10px 0;
 	margin-bottom: 0;
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 	font-size: 33px;
 	line-height: 40px;
 	color: #000000;
@@ -32,8 +32,8 @@ h2 a {
 }
 
 h3 {
-	font-family: Helvetiker;
-	font-size: 28px;
+  margin-top: 50px;
+	font-size: 24px;
 	color: #1648a3;
 }
 
@@ -55,7 +55,7 @@ hr.dotted {
 
 p {
 	font-size: 16px;
-	line-height: 28px;
+	line-height: 26px;
 	margin: 25px 0px;
 	margin-top: 15px;
 }
@@ -141,6 +141,7 @@ div.header .links a.e { color: #000000; }
 div#main-content {
 	clear: both;
 	overflow: hidden;
+  width: 100%;
 }
 /* End of Content Bars */
 
@@ -173,13 +174,12 @@ div.footer .return {
 div.date {
 	font-size: 15px;	
 	color: #4f4f4f;
+  margin-bottom: 30px;
 
 }
 
 div.post {
-	padding: 10px 0 ;
 	border-bottom: 1px dashed#e8e8e8;
-	padding-bottom: 20px;
 }
 
 div.post.last {
@@ -346,4 +346,39 @@ pre {
   body{
     -webkit-text-size-adjust: none;
   }
+}
+
+.blog-listing {
+  margin: 0 auto;
+  margin-bottom: 15px;
+
+}
+.blog-listing a {
+  display: block;
+  clear: both;
+  line-height: 15px;
+}
+.blog-listing a.pad {
+  margin-top: 20px;
+}
+
+
+.blog-listing a .date {
+  line-height: 14px;
+  font-size: 11px;
+  display: inline-block;
+  float: left;
+  height: 20px;
+
+  text-align: right;
+  width: 70px;
+  padding-right: 7px;
+  color: #262626;
+  margin-right: 7px;
+  padding-left: 30px;
+}
+.blog-listing a .title {
+  font-size: 12px;
+  display: inline-block;
+  text-align: left;
 }
