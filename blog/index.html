@@ -20,7 +20,7 @@ title: Blog
       
       <span class='date'>
         {% if last_month != month && last_year != year %}
-        {{ post.date | date: "%B<br>%Y" }}
+        {{ post.date | date: "%B<br/>%Y" }}
         {% endif %}
       </span>
       <span class='title'>
