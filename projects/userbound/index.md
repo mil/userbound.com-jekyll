@@ -4,7 +4,7 @@ title: Userbound
 description: A multi-user web browser concept in which each user is a character. You can chat with other users on the same page as you. Clicking on a link makes your character jump up and into the link.
 ---
 ### The Concept and Team
-<div style="float: right; padding: 20px"><img src="/images/userbound-character.png"/></div>
+<div style="float: right; padding: 20px"><img alt="The Character" src="/images/userbound-character.png"/></div>
 In Spring of 2010 I thought up an intresting concept for a web browser. What if there was a web browser where everyone using that web browser was represented as a character on the page being viewed. Further, when you clicked on a link your character would actually jump up and into the link.
 
 So I called up my brother, [Holden](https://github.com/hs89), and told him about my idea. He was also intrested in the idea so we decided we'd persue it together. We made the first prototype at the 2011 NYC Disrupt Hackthon and continued to work on it for many months after that. All throughout, Holden worked to build a back-end API, while I built the front-end web-application. Also at some point we brought in an old friend, Michael Ryterband, to help us create the character for the project.
@@ -17,13 +17,13 @@ Below are some screenshot of the user interface for Userbound. Basically you are
 Once logged in, you are thrown onto the Internet as a character. You can move around using you arrow keys.  If you click on a link you're character actually jumps up and into the link. Also if someone else comes to the same page as you you can chat with them. If they click on a link you can see them jump into it and visa versa.
 
 *The basic user interface:*
-<a href="/images/userbound-shot-a.png"><img src="/images/userbound-shot-a-thumb.jpg" /></a>
+<a href="/images/userbound-shot-a.png"><img alt="Userbound Interface" src="/images/userbound-shot-a-thumb.jpg" /></a>
 
 *Jumping into a link:*
-<a href="/images/userbound-shot-b.png"><img src="/images/userbound-shot-b-thumb.jpg" /></a>
+<a href="/images/userbound-shot-b.png"><img alt="Link Jump in the Userbound Interface" src="/images/userbound-shot-b-thumb.jpg" /></a>
 
 *Chatting with another user:*
-<a href="/images/userbound-shot-c.png"><img src="/images/userbound-shot-c-thumb.jpg" /></a>
+<a href="/images/userbound-shot-c.png"><img alt="Chatting with Another User in the Userbound Interface" src="/images/userbound-shot-c-thumb.jpg" /></a>
 
 There is also a minimal friends system so that you can chat with friends on different pages and teleport to friends' locations. Additionally we have a portal system (can be seen in first screenshot) which allows you to create two way links between sites within Userbound.
 
