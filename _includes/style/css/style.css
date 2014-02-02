@@ -208,34 +208,19 @@ div#pagination a {
 
 
 /* Project */
-div.project-feature {
-}
-
-div.project-feature h3 {
-
-}
-
-img.project-image {
-	margin-top: 20px;
-	margin-bottom: -10px;
-	border-top: 1px dotted #e8e8e8;
-	border-bottom: 1px dotted #e8e8e8;
-	padding: 4px 0;
-
-}
-
-hr.project {
-	border-bottom: 1px dashed #e8e8e8;
-	height: 0;
-	background: none;
-	margin-bottom: 40px;
-}
-
 
 div.project h3 {
 	margin-top: 30px;
-	margin-bottom: 0px;
+	padding-bottom: 8px;
+  color: #000000;
+  font-size: 20px;
+  font-weight: normal;
+  border-bottom: 1px dashed #888888;
+  display: inline-block;
+  clear: both;
 }
+
+
 
 
 div.project p {
@@ -243,12 +228,11 @@ div.project p {
 
 
 div.project .description {
-	font-size: 16px;	
-	line-height: 30px;
+	font-size: 15px;	
 	color: #4f4f4f;
+  margin-bottom: 20px;
+  line-height: 18px;
 
-	padding-bottom: 25px;
-	border-bottom: 1px dashed #e8e8e8;
 }
 
 
