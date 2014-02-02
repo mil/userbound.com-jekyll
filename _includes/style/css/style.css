@@ -381,4 +381,5 @@ pre {
   font-size: 12px;
   display: inline-block;
   text-align: left;
+  max-width: 350px;
 }
