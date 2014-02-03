@@ -1,6 +1,6 @@
 [submodule "ui/mil-edit"]
 	path = ui/mil-edit
   url = git://github.com/mil/mil-edit
-[submodule "ui/miledit2"]
-	path = ui/miledit2
+[submodule "ui/miledit-2"]
+	path = ui/miledit-2
 	url = git://github.com/mil/miledit-2.git
