@@ -213,7 +213,7 @@ div.project h3 {
 	margin-top: 35px;
 	padding-bottom: 0px;
   margin-bottom: 0;
-  color: #000000;
+  color: #252525;
   font-size: 20px;
   font-weight: 200;
 }
@@ -222,6 +222,7 @@ div.project h3 {
 
 
 div.project p {
+  color: #3a3a3a
 }
 
 
