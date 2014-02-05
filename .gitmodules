@@ -4,3 +4,9 @@
 [submodule "ui/miledit-2"]
 	path = ui/miledit-2
 	url = git://github.com/mil/miledit-2.git
+[submodule "mil-edit-2"]
+	path = mil-edit-2
+	url = git://github.com/mil/mil-edit-2.git
+[submodule "ui/mil-edit-2"]
+	path = ui/mil-edit-2
+	url = git://github.com/mil/mil-edit-2.git
