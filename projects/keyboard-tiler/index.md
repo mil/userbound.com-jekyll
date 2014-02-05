@@ -29,7 +29,7 @@ I scripted around xdotool so I could focus on the logic of processing the two po
 %x[xdotool getactivewindow windowsize --sync #{newWidth} #{newHeight - (decorationsHeight * 2)}]
 </pre>
 
-Providing keybindings is another task seperate from the logic of my key processing script. For the keybindings my first thought was to use [xchainkeys](http://code.google.com/p/xchainkeys). This way I could have emacs style key chording for pressing two keys in positioing.  To generate the keybindings for xchainkeys, I created the [logic to generate all permutations](https://github.com/mil/keyboard-tiler/blob/master/utils/generate-xchains.rb) for any two keys on the grid being pressed:
+Providing keybindings is another task seperate from the logic of my key processing script. For the keybindings my first thought was to use [xchainkeys](http://code.google.com/p/xchainkeys). This way I could have emacs style key chording for pressing two keys in positioning.  To generate the keybindings for xchainkeys, I created the [logic to generate all permutations](https://github.com/mil/keyboard-tiler/blob/master/utils/generate-xchains.rb) for any two keys on the grid being pressed:
 
 <pre class="sh_ruby">
 $tiles = [
