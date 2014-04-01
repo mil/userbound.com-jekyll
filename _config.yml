@@ -1,2 +1,4 @@
 permalink: blog/:title
 url: userbound.com
+sass:
+    style: compressed
