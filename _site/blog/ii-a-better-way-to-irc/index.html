@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head><title>
+  
+  ii - A Better Way to IRC | Miles Sandlar
+  
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link rel="icon" href="/style/images/favicon.ico" />
+<link rel="stylesheet" href="/css/all.css"/>
+<script type="text/javascript" src="/style/all.js"></script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22486639-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+	<body onload="sh_highlightDocument();">
+		<div id="main">
+			<header>
+    <nav>
+      
+        <a  href="/front-end">Front End</a>
+      
+        <a  href="/interfaces">Interface</a>
+      
+
+      <span class='seperator'></span>
+      
+        <a  href="/miscart">&omega;</a>
+      
+        <a class='active' href="/blog">&beta;</a>
+      
+        <a  href="/contact">&#9993</a>
+      
+  </nav>
+
+
+  <div class="right links">
+    <a class="a" title="My Resume" href="/resources/resume.pdf">M</a><a target="_blank" class="b" title="My Github Account" href='http://github.com/mil'>i</a><a target="_blank" class="c" title="You've spotted me!" href='http://www.freep.com/article/20130921/news05/309210021'>l</a><a target="_blank" class="d" title="My LinkedIn Account" href='http://linkedin.com/in/sandlar'>e</a><a target="_blank" class="e" title="My Ancient Web Design Company" href='http://logicdrift.com'>s</a>
+  </div>
+</header>
+
+			<div id="main-content">
+	<div class="post last">
+		<h2>ii - A Better Way to IRC</h2>
+    <div class="date">June 11, 2012, 9:23PM</div>
+		<div class="content">
+			<p><a href="http://tools.suckless.org/ii">ii</a> is a better IRC client created by the great folk at <a href="http://suckless.org">suckless</a>. ii is an IRC client that works completely via the filesystem and FIFOs to provide files and folders representing the servers, channels, and chats you are in on IRC. Sound interesting? To me it sure did – but I found rather sparse documentation on using ii. Thus, the creation of this post. ii doesn’t need much explanation as its usage is basic and it is just 500 lines of C, but it can seem intimidating and impractical for personal use at first glance. However, its a joy once you have ii working and realize its simplicity. This guide should get you headed in that path.</p>
+
+<h3 id="setting_up_ii">Setting Up ii</h3>
+
+<p>So how does one use the ii in practicality? The first step is to grab yourself a copy of <a href="http://tools.suckless.org/ii">ii from suckless</a>, extract the .tar.gz, and do a standard make/install (I’ll assume you can do that much on your own).</p>
+
+<p>Once you’ve done that, run <strong>ii</strong> for the first time with:</p>
+<pre class='sh_c'>ii -s irc.freenode.net -n yournick</pre>
+<p>The folder <strong>~/irc</strong> will be created containing all of your IRC data as such:</p>
+<pre class='sh_c'>
+irc/irc.freenode.net
+|-- chanserv
+|   `-- out
+|-- nickserv
+|   |-- in
+|   `-- out
+|-- out
+`-- in
+</pre>
+<p>While ii is running that means you are connected to the server. If you look in <strong>~/irc</strong> you should see a folder named <strong>irc.freenode.net</strong> and within that folder, two folders: <strong>chanserv</strong> and <strong>nickserv</strong>. Keep an eye on <strong>~/irc</strong> though usage as all ii does is work with the data in that folder.</p>
+
+<p>If you have a registered nickname you’d like to identify with, simply go into the <strong>nickserv</strong> folder, echo to the <strong>in</strong> FIFO, and verify the results with tail like so:</p>
+<pre class='sh_c'>cd ~/irc/irc.freenode.net/nickserv
+echo "identify mysupersecretpassword" > in
+tail -n 2 out
+</pre>
+<p>Assuming you entered the correct password, the nickserv should have identified you. Now your free to enter any channels you might like. The method for joining channels is just like how you talked to the <strong>nickserv</strong>. Here is an example of joining <strong>#testchannel</strong> within <strong>irc.freenode.net</strong>:</p>
+<pre class='sh_c'>cd ~/irc/irc.freenode.net/
+echo "/j #testchannel" > in
+</pre>
+<p>Now in the <strong>irc.freenode.net</strong> folder you should see a folder named <strong>#testchannel</strong>. Within that folder again, there are <strong>in</strong> and <strong>out</strong> files. Echo something to <strong>in</strong> it will be sent to the channel. The <strong>out</strong> file contains everything you get back from the channel. This should be pretty basic and simple to understand, and that’s the point.</p>
+
+<p>So what about viewing the <strong>out</strong> file? cat? No. I don’t think you want to be cat’ing the <strong>out</strong> file every few seconds to check for new conversation. This is the exact kind of thing <strong>tail</strong> was built for. Additionally tail can be combined another script in order to add syntax highlighting. Another option is using <a href="http://www.vanheusden.com/multitail">multitail</a> and <a href="http://nion.modprobe.de/blog/archives/440-Using-the-ii-irc-client.html">some rules</a>. However, I didn’t want to install another package, so I just wrote <a href="http://github.com/mil/configs-and-bins/blob/master/bins/regexColorize">my own script</a> for syntax highlighting with <strong>tail</strong>. Here’s what my ii <strong>out</strong> files look like when viewed:</p>
+
+<p><img alt='Colorizing ii output with regex-colorize' src='/images/regex-colorize.png' /></p>
+
+<p>The colors can be changed easily via my script. Feel free to grab and modify <a href="http://github.com/mil/configs-and-bins/blob/master/bins/regexColorize">my regexColorize script from my github</a>. I use my <strong>regexColorize</strong> to view my out files like this:</p>
+<pre class='sh_c'>tail -f -n 500 out | regexColorize</pre>
+<p>And that’s about it… A simple setup for using the ii irc client. I usually throw my tails piped to regexColorize in tmux, but you can read about using tmux or screen in many other places. Finally - if you don’t like my methods for using ii, other options include: <a href="http://bitbucket.org/emg/pcw">PCW - Popup Chat Windows</a> or a <a href="http://nion.modprobe.de/blog/archives/440-Using-the-ii-irc-client.html">Multitail Solution</a>. Regardless, I hope I will have made a few irssi, xchat, etc fans convert to ii.</p>
+		</div>
+	</div>
+</div>
+
+			<footer>
+  
+    <a title="Back to Blog" class="return" href="/blog">&#171;</a>
+  
+  <a class='copyright' href="http://creativecommons.org/licenses/by/3.0/" target="_blank" title="CC Attribution 3.0 Unported">&copy;</a>
+	<span class="validate">
+    <a target="_blank" title='XHTML 1.0 Transitional DTD' href="http://validator.w3.org/check?uri=http://userbound.com//blog/ii-a-better-way-to-irc">Valid</a><a target="_blank" title='CSS2.1' href="http://jigsaw.w3.org/css-validator/validator?uri=http://userbound.com/style/all.css">ates</a>
+  </span>
+</footer>
+
+		</div>
+	</body>
+</html>

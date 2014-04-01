@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head><title>
+  
+  Mplayer's FIFO | Miles Sandlar
+  
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link rel="icon" href="/style/images/favicon.ico" />
+<link rel="stylesheet" href="/css/all.css"/>
+<script type="text/javascript" src="/style/all.js"></script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22486639-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+	<body onload="sh_highlightDocument();">
+		<div id="main">
+			<header>
+    <nav>
+      
+        <a  href="/front-end">Front End</a>
+      
+        <a  href="/interfaces">Interface</a>
+      
+
+      <span class='seperator'></span>
+      
+        <a  href="/miscart">&omega;</a>
+      
+        <a class='active' href="/blog">&beta;</a>
+      
+        <a  href="/contact">&#9993</a>
+      
+  </nav>
+
+
+  <div class="right links">
+    <a class="a" title="My Resume" href="/resources/resume.pdf">M</a><a target="_blank" class="b" title="My Github Account" href='http://github.com/mil'>i</a><a target="_blank" class="c" title="You've spotted me!" href='http://www.freep.com/article/20130921/news05/309210021'>l</a><a target="_blank" class="d" title="My LinkedIn Account" href='http://linkedin.com/in/sandlar'>e</a><a target="_blank" class="e" title="My Ancient Web Design Company" href='http://logicdrift.com'>s</a>
+  </div>
+</header>
+
+			<div id="main-content">
+	<div class="post last">
+		<h2>Mplayer's FIFO</h2>
+    <div class="date">August 14, 2012, 9:01AM</div>
+		<div class="content">
+			<p>I was incredibly excited when I found out that mplayer can be controlled via a FIFO. It wasn’t a huge suprise as ofcourse there must be some IPC for mplayer, but still, this is awesome.</p>
+
+<p>First make the FIFO for mplayer:</p>
+<pre class='sh_c'>
+mkfifo /home/mil/fifos/mplayer
+</pre>
+<p>Now, you can control mplayer via the FIFO by specifying a file with -input:</p>
+<pre class='sh_c'>
+mplayer -input file=/home/mil/fifos/mplayer somemediafiles 
+echo "pt_step 1" > /home/mil/fifos/mplayer
+echo "pause" > /home/mil/fifos/mplayer
+</pre>
+<p>Let’s see all the available commands that the FIFO accepts:</p>
+<pre class='sh_c'>mplayer -input cmdlist</pre>
+<p>And finally if you don’t want to have to use the -input file= syntax every time you start mplayer, you can have mplayer by default open the FIFO by specifying the path to your FIFO in your ~/.mplayer/config:</p>
+<pre class='sh_c'>
+> cat ~/.mplayer/config
+# mplayer config file
+input=file=/home/mil/fifos/mplayer
+</pre>
+<p>And that’s all. Use mplayer’s FIFO.</p>
+		</div>
+	</div>
+</div>
+
+			<footer>
+  
+    <a title="Back to Blog" class="return" href="/blog">&#171;</a>
+  
+  <a class='copyright' href="http://creativecommons.org/licenses/by/3.0/" target="_blank" title="CC Attribution 3.0 Unported">&copy;</a>
+	<span class="validate">
+    <a target="_blank" title='XHTML 1.0 Transitional DTD' href="http://validator.w3.org/check?uri=http://userbound.com//blog/Mplayers-FIFO">Valid</a><a target="_blank" title='CSS2.1' href="http://jigsaw.w3.org/css-validator/validator?uri=http://userbound.com/style/all.css">ates</a>
+  </span>
+</footer>
+
+		</div>
+	</body>
+</html>

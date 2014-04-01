@@ -6,14 +6,19 @@ sass:
 navigation_a:
   - text: Front End
     href: /front-end
+    slug: front-end
   - text: Interface
     href: /interfaces
+    slug: interfaces
 
 navigation_b:
   - text: '&omega;'
     href: /miscart
+    slug: art
   - text: '&beta;'
     href: /blog
+    slug: blog
   - text: '&#9993'
-    href: /blog
+    href: /contact
+    slug: contact
 

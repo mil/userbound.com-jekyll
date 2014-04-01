@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head><title>
+  
+  Window Resizing in Xlib | Miles Sandlar
+  
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link rel="icon" href="/style/images/favicon.ico" />
+<link rel="stylesheet" href="/css/all.css"/>
+<script type="text/javascript" src="/style/all.js"></script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22486639-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+	<body onload="sh_highlightDocument();">
+		<div id="main">
+			<header>
+    <nav>
+      
+        <a  href="/front-end">Front End</a>
+      
+        <a  href="/interfaces">Interface</a>
+      
+
+      <span class='seperator'></span>
+      
+        <a  href="/miscart">&omega;</a>
+      
+        <a class='active' href="/blog">&beta;</a>
+      
+        <a  href="/contact">&#9993</a>
+      
+  </nav>
+
+
+  <div class="right links">
+    <a class="a" title="My Resume" href="/resources/resume.pdf">M</a><a target="_blank" class="b" title="My Github Account" href='http://github.com/mil'>i</a><a target="_blank" class="c" title="You've spotted me!" href='http://www.freep.com/article/20130921/news05/309210021'>l</a><a target="_blank" class="d" title="My LinkedIn Account" href='http://linkedin.com/in/sandlar'>e</a><a target="_blank" class="e" title="My Ancient Web Design Company" href='http://logicdrift.com'>s</a>
+  </div>
+</header>
+
+			<div id="main-content">
+	<div class="post last">
+		<h2>Window Resizing in Xlib</h2>
+    <div class="date">May 29, 2012, 2:02AM</div>
+		<div class="content">
+			<p>In many minimal X window managers, the model for resizing windows follows the form of: hold down a modifier key, press the secondary click, and drag. This functionality can be seen in <a href="http://i3wm.org">i3</a> and <a href="http://incise.org/tinywm.html">TinyWM</a> among many other X window managers. But what happens when you’re in resize mode, dragging, and hit the border on the left or top side (i.e. the window is as small as it can get vertically/horizontally)? Well you’ve hit the border.</p>
+
+<p>Below is a snippet of the window manager I’m working on. In my window manager, instead of just hitting the border / threshold when resizing, the window actually flips. So if you start to drag over the border to left or the top, the window will actually invert (not the content but the layout).</p>
+<pre class='sh_c'>
+//This struct's values are set in the ButtonPress Event
+typedef struct {
+	XButtonEvent       buttonEvent;
+	XWindowAttributes  attributes;
+} PointerMotion;
+PointerMotion origin;
+</pre><pre class='sh_c'>
+//Within the MotionNotify Event
+/* Calculate Difference between current position original click */
+int xDifference = event -&gt; xbutton.x_root - origin.button.x_root;
+int yDifference = event -&gt; xbutton.y_root - origin.button.y_root;
+
+/* Data for XMoveResize if contracting/expanding normally */
+int newX = origin.attributes.x;
+int newY = origin.attributes.y;
+int newWidth = origin.attributes.width + xDifference;
+int newHeight = origin.attributes.height + yDifference;
+
+/* Check if Drag is to the left or top of window, flip window */
+if (newWidth == 0) { newWidth = 1; } else if (newWidth &lt; 1 ) {
+	newX     = newX + xDifference + origin.attributes.width;
+	newWidth = (xDifference * -1) - origin.attributes.width;
+}
+if (newHeight == 0) { newHeight = 1; } else if (newHeight &lt; 1) {
+	newY      = newY + yDifference + origin.attributes.height;
+	newHeight = (yDifference * -1) - origin.attributes.height;
+}
+
+/* Fire to XMoveResizeWindow */
+XMoveResizeWindow(display, origin.button.subwindow,newX, newY, newWidth, newHeight);
+</pre>
+<p>Basically, if drag difference plus the window’s original width/height is less than one, then we’re dragging over the border of the top/left. In that case, the width/height is effectivly inverted and the x/y is set accordingly. Note: the check for the height/width == 0 is to prevent X from erroring out.</p>
+
+<p>For a more in context sample see my project, <a href="http://github.com/mil/simple-wm">Simple WM</a>, on GitHub.</p>
+		</div>
+	</div>
+</div>
+
+			<footer>
+  
+    <a title="Back to Blog" class="return" href="/blog">&#171;</a>
+  
+  <a class='copyright' href="http://creativecommons.org/licenses/by/3.0/" target="_blank" title="CC Attribution 3.0 Unported">&copy;</a>
+	<span class="validate">
+    <a target="_blank" title='XHTML 1.0 Transitional DTD' href="http://validator.w3.org/check?uri=http://userbound.com//blog/Window-Resizing-In-Xlib">Valid</a><a target="_blank" title='CSS2.1' href="http://jigsaw.w3.org/css-validator/validator?uri=http://userbound.com/style/all.css">ates</a>
+  </span>
+</footer>
+
+		</div>
+	</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head><title>
+  
+  X Cursors and Gumby | Miles Sandlar
+  
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link rel="icon" href="/style/images/favicon.ico" />
+<link rel="stylesheet" href="/css/all.css"/>
+<script type="text/javascript" src="/style/all.js"></script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22486639-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+	<body onload="sh_highlightDocument();">
+		<div id="main">
+			<header>
+    <nav>
+      
+        <a  href="/front-end">Front End</a>
+      
+        <a  href="/interfaces">Interface</a>
+      
+
+      <span class='seperator'></span>
+      
+        <a  href="/miscart">&omega;</a>
+      
+        <a class='active' href="/blog">&beta;</a>
+      
+        <a  href="/contact">&#9993</a>
+      
+  </nav>
+
+
+  <div class="right links">
+    <a class="a" title="My Resume" href="/resources/resume.pdf">M</a><a target="_blank" class="b" title="My Github Account" href='http://github.com/mil'>i</a><a target="_blank" class="c" title="You've spotted me!" href='http://www.freep.com/article/20130921/news05/309210021'>l</a><a target="_blank" class="d" title="My LinkedIn Account" href='http://linkedin.com/in/sandlar'>e</a><a target="_blank" class="e" title="My Ancient Web Design Company" href='http://logicdrift.com'>s</a>
+  </div>
+</header>
+
+			<div id="main-content">
+	<div class="post last">
+		<h2>X Cursors and Gumby</h2>
+    <div class="date">May 14, 2012, 3:19AM</div>
+		<div class="content">
+			<p>I’ve been playing around with Xlib lately and I found out that X11 comes with a great set of cursors included by default. I was pretty excited when I found out the X developers decided to throw Gumby into the mix! Look at this cursor here:</p>
+
+<p><img src="/images/gumby_light.gif" alt="Gumby X Cursor Light" /> <img src="/images/gumby_dark.gif" alt="Gumby X Cursor Dark" /></p>
+
+<p>Yep Gumby is included in Xlib. Check out cursor number 56 in <a href="http://tronche.com/gui/x/xlib/appendix/b">Xlib Appendix B: X Font Cursors</a> which defines XC_gumby. Gumby can be used in an Xlib program like this:</p>
+<pre class='sh_c'>
+//Assumes you have previously defined display and window
+Cursor cursor;
+cursor = XCreateFontCursor(display, 56);
+XDefineCursor(display, *window, cursor);
+</pre>
+<p><a href="http://tronche.com/gui/x/xlib/pixmap-and-cursor/XCreateFontCursor.html">XCreateFontCursor()</a>, part of <a href="http://tronche.com/gui/x/xlib">Xlib</a>, takes in two parameters: your display (type Display) and the shape for the cursor (type unsigned int). XCreateFontCursor() gives you a variable (of type Cursor) which you can use with <a href="http://tronche.com/gui/x/xlib/window/XDefineCursor.html">XDefineCursor()</a> to set the cursor for the given display and window.</p>
+
+<p>In anycase, I just wanted to share this and thank the X developers for including Gumby as a standard cursor! He’ll come in use.</p>
+		</div>
+	</div>
+</div>
+
+			<footer>
+  
+    <a title="Back to Blog" class="return" href="/blog">&#171;</a>
+  
+  <a class='copyright' href="http://creativecommons.org/licenses/by/3.0/" target="_blank" title="CC Attribution 3.0 Unported">&copy;</a>
+	<span class="validate">
+    <a target="_blank" title='XHTML 1.0 Transitional DTD' href="http://validator.w3.org/check?uri=http://userbound.com//blog/X-Cursors-And-Gumby">Valid</a><a target="_blank" title='CSS2.1' href="http://jigsaw.w3.org/css-validator/validator?uri=http://userbound.com/style/all.css">ates</a>
+  </span>
+</footer>
+
+		</div>
+	</body>
+</html>
