@@ -1,11 +1,15 @@
 <header>
     <div class='nav'>
       {% for link in site.navigation_a %}
-      <a href="{{ link.href }}">{{ link.text }}</a>
+        {% assign currentslug= page.url | downcase | split: '/' %}
+        {{currentslug}}
+
+        <a {{ if link.slug == currentslug }}class='active'{{ endif }} href="{{ link.href }}">{{ link.text }}</a>
       {% endfor %}
+
       <span class='seperator'></span>
       {% for link in site.navigation_b %}
-      <a href="{{ link.href }}">{{ link.text }}</a>
+        <a href="{{ link.href }}">{{ link.text }}</a>
       {% endfor %}
   </div>
 
