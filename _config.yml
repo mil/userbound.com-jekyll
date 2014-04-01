@@ -2,3 +2,18 @@ permalink: blog/:title
 url: userbound.com
 sass:
     style: compressed
+
+navigation_a:
+  - text: Front End
+    href: /front-end
+  - text: Interface
+    href: /interfaces
+
+navigation_b:
+  - text: '&omega;'
+    href: /miscart
+  - text: '&beta;'
+    href: /blog
+  - text: '&#9993'
+    href: /blog
+
