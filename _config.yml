@@ -4,21 +4,15 @@ sass:
     style: compressed
 
 navigation_a:
+  - text: Interfaces
+    href: /interfaces
   - text: Front End
     href: /front-end
-    slug: front-end
-  - text: Interface
-    href: /interfaces
-    slug: interfaces
 
 navigation_b:
   - text: '&omega;'
-    href: /miscart
-    slug: art
+    href: /misc
   - text: '&beta;'
     href: /blog
-    slug: blog
   - text: '&#9993'
-    href: /contact
-    slug: contact
-
+    href: /about

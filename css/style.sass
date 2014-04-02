@@ -1,8 +1,14 @@
 /* Re-usable General Styles
 @font-face
-  src: url('ttf/Ralway-Regular.ttf')
+  src: url('../ttf/Raleway-Regular.ttf')
   font-family: Raleway
 
+@font-face
+  src: url('../ttf/OpenSans-Light.ttf')
+  font-family: Open Sans
+
+.fade-in
+  opacity: 0
 
 body
   font-family: Arial, sans
@@ -91,6 +97,8 @@ nav
     padding: 0 2px
     &.active
       color: black
+      &:hover
+        text-decoration: none
 
 
   .seperator
@@ -262,13 +270,13 @@ section
   padding: 0
   h2
     margin: 0
-    padding-left: 10px
     padding-bottom: 0
     display: inline-block
     color: #292929
     font-weight: normal
     font-size: 12px
   ul
+    font-family: Open Sans
     padding-left: 20px
     font-size: 13px
     line-height: 13px
@@ -279,22 +287,79 @@ section
       font-size: 8px
 
 .project-view
-  width: 680px
+  //border: 1px solid #cfcfcf
   margin: 0 auto
   overflow: hidden
   vertical-align: top
+  display: none
+  opacity: 0
+
+  &.active
+    display: table
+
+  .half
+    display: table-cell
+    vertical-align: middle
+    &:first-child
+      padding: 60px
+    &:last-child
+
+  .half
+    max-height: 300px
 
   .screenshot, .meta
+    max-width: 100%
+
+  .meta
+    padding-right: 20px
+    padding-left: 20px
+    vertical-align: middle
+    ul
+      margin: 0
+      padding: 0
+      li
+        margin: 0
+        $vert_marg: 10px
+        padding-top: $vert_marg
+        padding-bottom: $vert_marg
+        padding-left: 20px
+        font-size: 20px
+        list-style: none
+        background: url('../images/icons/bullet_black.png') no-repeat left center
+
+  a.visit
     display: inline-block
+    margin-top: 20px
+    font-size: 11px
+    &:hover
+      background: blue
+      color: white
 
   .screenshot
-    max-width: 300px
-    padding-right: 20px
-    border-right: 1px dotted #cfcfcf
+    height: 200px
+    border-radius: 2px
+    box-shadow: 3px 6px 10px #cfcfcf
   .meta
     width: 300px
+    padding-left: 30px
+
+    .inner
+      vertical-align: middle
+      border-left: 1px solid #cfcfcf
+      padding-left: 60px
     h2
+      margin-bottom: 10px
       font-size: 30px
+
+.front-end
+  .pager
+    float: right
+    button
+      background: none
+      border: none
+      outline: none
+    button.hidden
+      display: none
 
 @media screen and (max-device-width: 480px)
   body
