@@ -38,9 +38,19 @@ $(function($) {
     }
   });
 
-  $("nav.subnav").on("click", function(e) {
-    var target_section = "#" + $(e.target).text().replace(" ", "-");
-    console.log(target_section);
+  $("nav.subnav a").on("click", function(e) {
+    var target_section = ".shortlist#" + $(e.target).text().replace(" ", "-");
 
+    $(".subnav a.active").removeClass("active");
+    $(e.target).addClass("active");
+
+
+    $(".shortlist.active").animate({'opacity' : '0'}, 500, function() {
+      $(".shortlist.active").removeClass('active');
+      $(target_section).addClass('active');
+
+      $(target_section).animate({'opacity' : '1'}, 500, function() {
+      });
+    });
   });
 });

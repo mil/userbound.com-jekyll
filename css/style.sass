@@ -117,8 +117,11 @@ div
 header
   padding-top: 10px
   border-bottom: 1px solid #e8e8e8
+
   padding-bottom: 10px
-  margin-bottom: 20px
+
+  margin-bottom: 60px
+
   clear: both
   overflow: hidden
   .links
@@ -150,7 +153,10 @@ div#main-content
 footer
   font-size: 12px
   border-top: 1px solid #e8e8e8
-  margin-top: 20px
+
+  margin-top: 60px
+
+
   padding-top: 10px
   .copyright
     border-right: 1px dotted #cfcfcf
@@ -251,7 +257,7 @@ footer
     display: table-cell
     vertical-align: middle
     &:first-child
-      padding: 60px
+      padding: 12px 60px
     &:last-child
 
   .half
@@ -281,7 +287,8 @@ footer
   a.visit
     display: inline-block
     margin-top: 20px
-    font-size: 11px
+    font-size: 16px
+    font-family: Open Sans
     &:hover
       background: blue
       color: white
@@ -292,7 +299,6 @@ footer
     box-shadow: 3px 6px 10px #cfcfcf
   .meta
     width: 300px
-    padding-left: 30px
 
     .inner
       vertical-align: middle
@@ -308,24 +314,54 @@ footer
   vertical-align: middle
   .shortlists
     display: table-cell
+    padding-left: 30px
+
+  .subnav
+    padding-right: 30px
 
   .subnav
     display: table-cell
-    vertical-align: middle
+    vertical-align: top
     width: 200px
     float: none
     text-align: right
     border-right: 1px solid #cfcfcf
     a
       font-family: Raleway
-      font-size: 20px
+      font-size: 16px
+      margin-bottom: 8px
       display: block
       clear: both
       color: #888888
+      &.active
+        color: black
 
+  .shortlist
+    opacity: 0
+    display: none
+    font-size: 13px
+    font-family: Open Sans
+    &.active
+      display: block
+    a
+      font-family: Raleway
+      font-size: 20px
+      display: inline-block
+    .additional
+      display: inline-block
+      a
+        font-size: 12px
+    p
+      line-height: 18px
+      margin-top: 4px
 
-.shortlist
-  opacity: 0
-  display: none
-  &.active
-    display: block
+    .prj:last-child p
+      margin-bottom: 0
+
+section.about
+  font-family: Open Sans
+  padding: 0 60px
+
+  span.big
+    font-family: Raleway
+    font-size: 20px
