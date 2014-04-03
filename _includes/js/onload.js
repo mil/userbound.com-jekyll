@@ -3,12 +3,13 @@ $(function($) {
 
   // Page Next
   $(".pager .next").on("click", function() {
+    if ($(".pager .next").hasClass("hidden")) { return; }
     var current_item = $(".thumbnaildescription.active");
     var next_item = $(current_item).next();
 
     $(".thumbnaildescription.active").animate({'opacity' : '0'}, 500, function() {
-      $(current_item).removeClass('active');
       $(next_item).addClass('active');
+      $(current_item).removeClass('active');
 
       $(next_item).animate({'opacity' : '1'}, 500, function() {
       });
@@ -22,6 +23,7 @@ $(function($) {
 
   // Page Previous
   $(".pager .previous").on("click", function() {
+    if ($(".pager .previous").hasClass("hidden")) { return; }
     var current_item = $(".thumbnaildescription.active");
     var next_item = $(current_item).prev();
 
