@@ -4,10 +4,10 @@ sass:
     style: compressed
 
 navigation_a:
-  - text: Interfaces
-    href: /interfaces
   - text: Front End
     href: /front-end
+  - text: Projects
+    href: /projects
 
 navigation_b:
   - text: '&beta;'
