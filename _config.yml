@@ -10,9 +10,7 @@ navigation_a:
     href: /front-end
 
 navigation_b:
-  - text: '&omega;'
-    href: /misc
   - text: '&beta;'
     href: /blog
   - text: '&#9993'
-    href: /about
+    href: /art
