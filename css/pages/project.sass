@@ -1,0 +1,112 @@
+// Project Listing Page
+section.sidebar-content-split
+  display: table
+  vertical-align: middle
+  .shortlists
+    display: table-cell
+    padding-left: 30px
+
+  .subnav
+    padding-right: 30px
+
+  .subnav
+    display: table-cell
+    vertical-align: top
+    width: 200px
+    float: none
+    text-align: right
+    border-right: 1px solid #cfcfcf
+    a
+      font-family: Raleway
+      font-size: 16px
+      margin-bottom: 8px
+      display: block
+      clear: both
+      color: #888888
+      &.active
+        color: black
+
+  .shortlist
+    padding: 0
+    h2
+      margin: 0
+      padding-bottom: 0
+      display: inline-block
+      color: #292929
+      font-weight: normal
+      font-size: 12px
+    ul
+      font-family: Open Sans
+      padding-left: 20px
+      font-size: 13px
+      line-height: 13px
+    .additional
+      display: inline-block
+      padding-left: 2px
+      a
+        font-size: 8px
+
+    opacity: 0
+    display: none
+    font-size: 13px
+    font-family: Open Sans
+    &.active
+      display: block
+    a
+      font-family: Raleway
+      font-size: 20px
+      display: inline-block
+    .additional
+      display: inline-block
+      a
+        font-size: 12px
+    p
+      line-height: 18px
+      margin-top: 4px
+
+    .prj:last-child p
+      margin-bottom: 0
+
+
+// Indvidual Project Pages
+.project
+  h3
+    margin-top: 35px
+    padding-bottom: 0px
+    margin-bottom: 0
+    color: #252525
+    font-size: 20px
+    font-weight: 200
+  p
+    color: #3a3a3a
+  .description
+    font-size: 15px
+    color: #4f4f4f
+    margin-bottom: 20px
+    line-height: 24px
+
+// Individual Projects
+.ub-character
+  float: right
+  padding: 20px
+  padding-top: 60px
+
+#keyboard
+  margin-top: 15px
+  width: 100%
+  border: 1px dotted #e8e8e8
+  background: #eeeeee
+  tr
+    margin: 10px
+    background: #e8e8e8
+    td
+      background: white
+      padding: 8px
+      text-align: center
+      border: 1px dashed #cccccc
+      margin: 5px
+      &.hit
+        background: #eeeeee
+      &.act
+        font-weight: bold
+        background: #cccccc

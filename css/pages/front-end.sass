@@ -1,0 +1,67 @@
+section.bar.front-end
+
+  .thumbnaildescription
+    //border: 1px solid #cfcfcf
+    margin: 0 auto
+    overflow: hidden
+    vertical-align: top
+    display: none
+    opacity: 0
+
+    &.active
+      display: table
+
+    .half
+      display: table-cell
+      vertical-align: middle
+      &:first-child
+        padding: 12px 60px
+      &:last-child
+
+    .half
+      max-height: 300px
+
+    .screenshot, .meta
+      max-width: 100%
+
+    .meta
+      padding-right: 20px
+      padding-left: 20px
+      vertical-align: middle
+      ul
+        margin: 0
+        padding: 0
+        li
+          margin: 0
+          $vert_marg: 10px
+          padding-top: $vert_marg
+          padding-bottom: $vert_marg
+          padding-left: 20px
+          font-size: 20px
+          font-family: Open Sans
+          list-style: none
+          background: url('../images/icons/bullet_black.png') no-repeat left center
+
+    a.visit
+      display: inline-block
+      margin-top: 20px
+      font-size: 16px
+      font-family: Open Sans
+      &:hover
+        background: blue
+        color: white
+
+    .screenshot
+      height: 200px
+      border-radius: 2px
+      box-shadow: 3px 6px 10px #cfcfcf
+    .meta
+      width: 300px
+
+      .inner
+        vertical-align: middle
+        border-left: 1px solid #cfcfcf
+        padding-left: 60px
+      h2
+        margin-bottom: 10px
+        font-size: 30px
