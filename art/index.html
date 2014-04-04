@@ -2,7 +2,7 @@
 layout: default
 title: Miles Sandlar
 ---
-<section class='art'>
+<section class='bar art'>
   {% assign po = nil; %}
   {% for post in site.posts %}
     {% if post.categories contains 'art' %}  
@@ -15,4 +15,4 @@ title: Miles Sandlar
   {% endfor %}
 </section>
 
-<section class='pager'><a href="{{ po.previous.url }}">&larr;</a></section>
+<section class='bar pager'><a href="{{ po.previous.url }}">&larr;</a></section>
