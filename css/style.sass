@@ -11,6 +11,14 @@
   src: url('../ttf/Cutive_Mono.ttf')
   font-family: Cutive Mono
 
+
+@font-face
+  src: url('../ttf/Lustina-Regular.ttf')
+  font-family: Lustina
+
+
+
+
 .fade-in
   opacity: 0
 
@@ -26,7 +34,7 @@ body
       color: #5889e3
       text-decoration: underline
 header
-  padding: 0 10px
+  padding: 10px 0
   margin-bottom: 60px
   border-bottom: 1px solid #e8e8e8
 
@@ -142,9 +150,9 @@ header
 
 // be gone evil
 div#main
-    max-width: 800px
-    padding: 20px 20px
-    margin: 0 auto
+  max-width: 800px
+  padding: 20px 20px
+  margin: 0 auto
 
 
 
@@ -162,6 +170,7 @@ footer
 
 
   padding-top: 10px
+
   .copyright
     border-right: 1px dotted #cfcfcf
     padding-right: 10px
@@ -372,13 +381,20 @@ section.about
 
 section.bar.art
   text-align: center
+  p
+    display: inline-block
+    vertical-align: middle
+    text-align: center
+
   img
+    vertical-align: middle
     margin: 0 auto
-    max-height: 650px
-    max-height: 50%
-    max-width: 75%
+    height: 400px
+    width: auto
 
   pre.poem
+    padding: 0
+    height: 400px
     text-align: left
     background: none !important
     border: none !important
@@ -386,7 +402,9 @@ section.bar.art
     width: auto
     display: inline-block
     margin: 0 auto
-    font-family: Cutive Mono !important
+    font-family: Lusitana !important
+    font-weight: 100 !important
+    color: #777777 !important
     font-size: 20px !important
     line-height: 20px important
 
