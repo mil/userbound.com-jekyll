@@ -1,6 +1,7 @@
 ---
 layout: blog_entry 
 title: A Simpler TODO List 
+categories: blog
 time: 11:35AM
 ---
 There are likely thousands of TODO list "applications" and "systems" out there, however, I think we've forgotten the most simple and elegent solution:

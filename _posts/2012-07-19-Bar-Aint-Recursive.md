@@ -1,6 +1,7 @@
 ---
 layout: blog_entry 
 title: b(ar) a(in't) r(ecursive)
+categories: blog
 time: 10:53PM
 ---
 [b(ar) a(in't) r(ecurisve)](http://github.com/LemonBoy/bar) or bar for short is a new XCB based bar by the Lemon Man. Think dzen2 or conky, only zero bloat. Bar is only what's needed and nothing more. Under 300 lines of C, bar is a quality piece of software that I am glad to throw in my .xinitrc.

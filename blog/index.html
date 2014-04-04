@@ -7,27 +7,29 @@ title: Blog
   {% assign last_year = "" %}
 
   {% for post in site.posts reversed %}
-    {% capture month %}{{ post.date | date: "%B" }}{% endcapture %}
-    {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
+    {% if post.categories contains 'blog' %}
+      {% capture month %}{{ post.date | date: "%B" }}{% endcapture %}
+      {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
 
-    {% if last_month != month && last_year != year %}
-      {% assign class = "pad" %}
-    {% else %}
-      {% assign class = "" %}
+      {% if last_month != month && last_year != year %}
+        {% assign class = "pad" %}
+      {% else %}
+        {% assign class = "" %}
+      {% endif %}
+
+      <a class="{{ class }}" href="{{ post.url }}" title= '{{ post.date | date: "%m/%-d/%y" }}'>
+        
+        <span class='date'>
+          {% if last_month != month && last_year != year %}
+          {{ post.date | date: "%B<br/>%Y" }}
+          {% endif %}
+        </span>
+        <span class='title'>
+          {{ post.title }}
+        </span>
+      </a>
+      {% assign last_month = month %} 
+      {% assign last_year = year %} 
     {% endif %}
-
-    <a class="{{ class }}" href="{{ post.url }}" title= '{{ post.date | date: "%m/%-d/%y" }}'>
-      
-      <span class='date'>
-        {% if last_month != month && last_year != year %}
-        {{ post.date | date: "%B<br/>%Y" }}
-        {% endif %}
-      </span>
-      <span class='title'>
-        {{ post.title }}
-      </span>
-    </a>
-    {% assign last_month = month %} 
-    {% assign last_year = year %} 
   {% endfor %}
 </div>

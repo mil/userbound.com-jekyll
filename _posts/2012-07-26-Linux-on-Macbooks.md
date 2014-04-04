@@ -1,6 +1,7 @@
 ---
 layout: blog_entry 
 title: Linux on a Macbook
+categories: blog
 time: 1:31AM
 ---
 I got home the two nights ago to discover the screen of my Thinkpad cracked. A shame, but atleast I have a new server. In anycase, my only other spare computer currently happens to be my old 13" Duo Core White Macbook.

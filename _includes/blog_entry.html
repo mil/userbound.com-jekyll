@@ -5,5 +5,13 @@
 		<div class="content">
 			{{ content }}
 		</div>
+
+    {% if page.previous.url %}
+      <a href="{{ page.previous.url }}">&larr;</a>
+    {% endif %}
+    {% if page.next.url %}
+      <a href="{{ page.next.url }}">&rarr;</a>
+    {% endif %}
+
 	</div>
 </div>

@@ -1,6 +1,7 @@
 ---
 layout: blog_entry 
 title: X Cursors and Gumby
+categories: blog
 time: 3:19AM
 ---
 

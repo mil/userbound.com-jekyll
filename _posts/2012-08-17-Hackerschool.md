@@ -1,6 +1,7 @@
 ---
 layout: blog_entry
 title: Hackerschool
+categories: blog
 time: 11:56PM
 ---
 Well [Hackerschool](http://www.hackerschool.com) is nearly over now and the next batch application deadline is nearing. If you're a potential applicant wondering: "Is Hackerschool for me?" -- then maybe this post about my experience will help you figure that out.

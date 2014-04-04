@@ -1,4 +1,4 @@
-permalink: blog/:title
+permalink: /:categories/:title
 url: userbound.com
 sass:
     style: compressed

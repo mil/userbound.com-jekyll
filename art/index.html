@@ -2,21 +2,17 @@
 layout: default
 title: Miles Sandlar
 ---
-<section>
-  <pre class='poem'>
-    spectators snorts
-    bacon the ridden
-    village
+<section class='art'>
+  {% assign po = nil; %}
+  {% for post in site.posts %}
+    {% if post.categories contains 'art' %}  
 
-    orthogonal oceans
-    half howl pictch
+      {% assign po = post %}
+      {{ post.content }}
 
-    vactionining butchers
-    begin buffering banks
-    by section
-
-    tupled word couches
-    pastry bakers; her
-    lonely lost liquidated eyes
-  </pre>
+      {% break %}
+    {% endif %}
+  {% endfor %}
 </section>
+
+<section class='pager'><a href="{{ po.previous.url }}">&larr;</a></section>
