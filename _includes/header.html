@@ -1,21 +1,21 @@
 <header>
-    <nav>
-      {% for link in site.navigation_a %}
-        <a {% if page.url contains link.href %}class='active'{% endif %} href="{{ link.href }}">{{ link.text }}</a>
-      {% endfor %}
+  <div class="miles">
+    {% if page.url == "/index.html" %}
+    <a class="a" title="My Resume" href="/resources/resume.pdf">M</a><a target="_blank" class="b" title="My Github Account" href='http://github.com/mil'>i</a><a target="_blank" class="c" title="You've spotted me!" href='http://www.freep.com/article/20130921/news05/309210021'>l</a><a target="_blank" class="d" title="My LinkedIn Account" href='http://linkedin.com/in/sandlar'>e</a><a target="_blank" class="e" title="My Ancient Web Design Company" href='http://logicdrift.com'>s</a>
+    {% else %}
+    <a class='a' href="/">Miles</a>
+    {% endif %}
+  </div>
+  <nav>
+    {% for link in site.navigation_a %}
+    <a {% if page.url contains link.href %}class='active'{% endif %} href="{{ link.href }}">{{ link.text }}</a>
+    <span class='seperator'></span>
+    {% endfor %}
 
-      <span class='seperator'></span>
-      {% for link in site.navigation_b %}
-        <a {% if page.url contains link.href %}class='active'{% endif %} href="{{ link.href }}">{{ link.text }}</a>
-      {% endfor %}
+    {% for link in site.navigation_b %}
+    <a {% if page.url contains link.href %}class='active'{% endif %} href="{{ link.href }}">{{ link.text }}</a>
+    {% endfor %}
   </nav>
 
 
-  <div class="right links">
-    {% if page.url == "/index.html" %}
-      <a class="a" title="My Resume" href="/resources/resume.pdf">M</a><a target="_blank" class="b" title="My Github Account" href='http://github.com/mil'>i</a><a target="_blank" class="c" title="You've spotted me!" href='http://www.freep.com/article/20130921/news05/309210021'>l</a><a target="_blank" class="d" title="My LinkedIn Account" href='http://linkedin.com/in/sandlar'>e</a><a target="_blank" class="e" title="My Ancient Web Design Company" href='http://logicdrift.com'>s</a>
-    {% else %}
-      <a class='a' href="/">Miles</a>
-    {% endif %}
-  </div>
 </header>
