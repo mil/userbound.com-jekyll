@@ -1,17 +1,16 @@
-<div id="main-content">
-	<div class="post last">
-		<h2>{{ page.title }}</h2>
-    <div class="date">{{ page.date | date: "%B %d, %Y" }}, {{ page.time }}</div>
-		<div class="content">
-			{{ content }}
-		</div>
+<section class='bar blog-post'>
+  <h2>{{ page.title }}</h2>
+  <div class="date">{{ page.date | date: "%B %d, %Y" }}, {{ page.time }}</div>
+  <div class="content">
+    {{ content }}
+  </div>
+</section>
 
-    {% if page.previous.url %}
-      <a href="{{ page.previous.url }}">&larr;</a>
-    {% endif %}
-    {% if page.next.url %}
-      <a href="{{ page.next.url }}">&rarr;</a>
-    {% endif %}
-
-	</div>
-</div>
+<section class='bar pager'>
+  {% if page.previous.url %}
+  <a href="{{ page.previous.url }}">&larr;</a>
+  {% endif %}
+  {% if page.next.categories contains 'blog' %}
+  <a href="{{ page.next.url }}">&rarr;</a>
+  {% endif %}
+</section>
