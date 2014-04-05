@@ -5,6 +5,11 @@ header
 
   clear: both
   overflow: hidden
+
+  a
+    font-family: Liberation Sans
+
+
   .links
     display: inline-block
     border-right: 1px dotted #cfcfcf
@@ -27,8 +32,10 @@ header
     float: right
     a
       font-size: 11px
-      padding: 0 2px
+      padding: 2px 5px
       &.active
+        cursor: normal
+        background: white
         color: black
         &:hover
           text-decoration: none
@@ -38,4 +45,6 @@ header
       display: inline-block
       width: 0
       height: 7px
+      padding-left: 5px
+      margin-right: 5px
       border-right: 1px dotted #cfcfcf

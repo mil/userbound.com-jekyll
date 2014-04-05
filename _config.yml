@@ -10,7 +10,5 @@ navigation_a:
     href: /projects
 
 navigation_b:
-  - text: '&beta;'
-    href: /blog
   - text: '&#9993'
     href: /art
