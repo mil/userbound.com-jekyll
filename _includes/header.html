@@ -7,15 +7,12 @@
     {% endif %}
   </div>
   <nav>
-    {% for link in site.navigation_a %}
-    <a {% if page.url contains link.href %}class='active'{% endif %} href="{{ link.href }}">{{ link.text }}</a>
-    <span class='seperator'></span>
+    {% for link in site.navigation %}
+      <a {% if page.url contains link.href %}class='active'{% endif %} href="{{ link.href }}">{{ link.text }}</a>
+      {% if forloop.last != true %}
+        <span class='seperator'></span>
+      {% endif %}
     {% endfor %}
-
-    {% for link in site.navigation_b %}
-    <a {% if page.url contains link.href %}class='active'{% endif %} href="{{ link.href }}">{{ link.text }}</a>
-    {% endfor %}
-  </nav>
 
 
 </header>

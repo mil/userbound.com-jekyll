@@ -3,12 +3,10 @@ url: userbound.com
 sass:
     style: compressed
 
-navigation_a:
+navigation:
   - text: Front End
     href: /front-end
   - text: Interfaces
     href: /interfaces
-
-navigation_b:
   - text: '&#9993'
     href: /art
