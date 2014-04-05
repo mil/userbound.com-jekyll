@@ -6,8 +6,8 @@ sass:
 navigation_a:
   - text: Front End
     href: /front-end
-  - text: Projects
-    href: /projects
+  - text: Interfaces
+    href: /interfaces
 
 navigation_b:
   - text: '&#9993'

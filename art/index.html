@@ -1,18 +1,10 @@
 ---
-layout: default
+layout: none
 title: Miles Sandlar
 ---
-<section class='bar art'>
-  {% assign po = nil; %}
-  {% for post in site.posts %}
-    {% if post.categories contains 'art' %}  
-
-      {% assign po = post %}
-      {{ post.content }}
-
-      {% break %}
-    {% endif %}
-  {% endfor %}
-</section>
-
-<section class='bar pager'><a href="{{ po.previous.url }}">&larr;</a><a class='blog' href="/blog">&beta;</a></section>
+{% for post in site.posts %}
+  {% if post.categories contains 'art' %}  
+    <meta http-equiv="refresh" content="0; url={{ post.url }}" />
+    {% break %}
+  {% endif %}
+{% endfor %}

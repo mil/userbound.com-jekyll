@@ -2,6 +2,7 @@ header
   padding: 10px 0
   margin-bottom: 60px
   border-bottom: 1px solid #e8e8e8
+  box-shadow: -1px 10px 14px -17px #a9a9a9
 
   clear: both
   overflow: hidden
@@ -16,7 +17,10 @@ header
     padding-right: 10px
 
     a
-      font-size: 12px
+      font-size: 11px
+
+      &.a, &.b, &.c,&.d, &.e
+        font-size: 12px
       &.a
         color: #000000
       &.b
@@ -34,11 +38,18 @@ header
       font-size: 11px
       padding: 2px 5px
       &.active
+        font-size: 12px
         cursor: normal
         background: white
         color: black
         &:hover
           text-decoration: none
+
+      &:first-child
+        padding-right: 1px
+      &:first-child + a
+        padding-left: 1px
+
 
 
     .seperator
