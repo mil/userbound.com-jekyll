@@ -10,3 +10,65 @@ navigation:
     href: /interfaces
   - text: '&#9993'
     href: /art
+
+front_end:
+  - title: Patrick Cars
+    link: http://patrickcars.com
+    img: patrick-cars.png
+    tasks:
+      - Site Templates
+      - Graphics 
+
+  - title: Happy Mukti
+    link: http://bmwoffreehold.com
+    img: happy-mukti.png
+    tasks:
+      - Responsive Design
+      - Site Templates
+      - CMS Integration
+
+  - title: BMW of Freehold
+    link: http://bmwoffreehold.com
+    img: bmw-of-freehold.png
+    tasks:
+      - Site Templates
+      - Graphics
+
+  - title: Plus Packaging
+    link: http://bmwoffreehold.com
+    img: plus-packaging.png
+    tasks:
+      - Site Templates
+      - Graphics
+      - Flash
+  
+  - title: DCH Millburn Audi
+    link: http://bmwoffreehold.com
+    img: dch-millburn-audi.png
+    tasks:
+      - Site Templates
+      - Graphics
+      - Flash
+
+  - title: Indpendence PLC
+    link: http://bmwoffreehold.com
+    img: independence-plc.png
+    tasks:
+      - Site Templates
+      - CMS Integration
+      - PHP Features
+  - title: Prohead Golf Blog
+    link: http://pro-headgolfblog.com
+    img: prohead-golf-blog.png
+    tasks:
+      - Templates
+      - Graphics
+      - Test
+  - title: Strand Center for the Arts
+    link: http://strand.org
+    img: strand.png
+    tasks:
+      - Site Templates
+      - Graphics
+      - Flash
+
