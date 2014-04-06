@@ -1,4 +1,10 @@
+@mixin boxsize
+  box-sizing: border-box
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+
 section.bar.front-end
+  // RENAME TO SPLIT
   .thumbnaildescription
     //border: 1px solid #cfcfcf
     margin: 0 auto
@@ -6,6 +12,7 @@ section.bar.front-end
     vertical-align: top
     display: none
     opacity: 0
+    margin: 0 auto
 
     &.active
       display: table
@@ -13,8 +20,13 @@ section.bar.front-end
     .half
       display: table-cell
       vertical-align: middle
+      @include boxsize
+      width: 49%
       &:first-child
-        padding: 15px 4px
+        padding-right: 60px
+        padding-top: 6px
+        padding-bottom: 12px
+        text-align: right
       &:last-child
 
     .half
@@ -55,15 +67,14 @@ section.bar.front-end
       border-radius: 2px
       box-shadow: 3px 6px 10px #cfcfcf
     .meta
-      width: 340px
 
       .inner
         text-align: left
-        min-width: 240px
         vertical-align: middle
-        border-left: 1px solid #cfcfcf
-        padding-left: 40px
-        margin-left: 40px
+        border-left: 1px dotted #cfcfcf
+        padding-left: 60px
+        padding-top: 10px
+        padding-bottom: 10px
       h2
         margin-bottom: 10px
         font-size: 30px
