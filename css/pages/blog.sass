@@ -1,49 +1,48 @@
 section.bar.blog-listing
   margin: 0 auto
   margin-bottom: 15px
-
   width: 480px 
+  max-width: 100%
+  $pad_across: 15px
 
-  a
+  .month
     display: block
-    clear: both
-    line-height: 15px
-    &.pad
-      margin-top: 20px
-    .date
-      line-height: 14px
-      font-size: 11px
-      display: inline-block
-      float: left
-      height: 20px
-      text-align: right
+    margin-bottom: 20px
+
+    .label
+      display: table-cell
       width: 70px
-      padding-right: 7px
-      color: #262626
-      margin-right: 7px
-      padding-left: 30px
-    .title
-      font-size: 12px
-      display: inline-block
-      text-align: left
-      max-width: 350px
 
-  .date
-    font-size: 15px
-    color: #4f4f4f
-    margin: 0
-    height: 0px
+      span
+        display: block
+        font-size: 13px
+        line-height: 15px
+        color: #4f4f4f
+        margin: 0
+        height: 0px
+        text-align: right
+        border-right: 1px dotted #cfcfcf
+        padding-right: $pad_across
+        vertical-align: top
 
-  a.pad .date
-    height: 20px
+    .entries
+      display: table-cell
+      vertical-align: top
+      padding-left: $pad_across
 
-  .post
-    border-bottom: 1px dashed #e8e8e8
-    &.last
-      border: none
+      a
+        display: block
+        clear: both
+        line-height: 17px
+        font-size: 12px
+        margin-bottom: 4px 
 
+  
 section.bar.blog-post
   font-family: Arial, Liberation Sans
+
+  .date
+    font-size: 12px
 
   h1, h2, h3, h4, h5, h6
     font-weight: normal

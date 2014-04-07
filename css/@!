@@ -1,49 +1,13 @@
-// big break
-@media screen and (max-width: 740px)
-  section.bar.front-end
-    text-align: center
-  section.bar.front-end .split.active
-    max-width: 100%
-    width: auto
-    display: inline-block
-    margin: 0 auto
-    .half
-      display: block
-      text-align: center
-      padding: 0
-
-      .screenshot
-        margin-bottom: 30px
-        text-align: center
-        width: auto
-
-      &:first-child
-        padding: 0
-        text-align: center
-        padding-right: 0
-      &:last-child
-        padding-left: 0
-        border: none
-        margin-left: 0
-
-        span.bull
-          display: none
-
-        ul li
-          background: none
-          padding-left: 0
-          padding-bottom: 0
-          text-align: center
-  body section.textlist
-    .subnav, .shortlists
-      display: block
- 
-
 // mobile
 @media screen and (max-width: 480px)
   body
     -webkit-text-size-adjust: none
 
+    div#main
+      padding: 20px
+
+    header
+      margin-bottom: 20px
 
   img
     height: auto
@@ -54,14 +18,12 @@
   section.bar.about
     padding: 0 30px
 
-  section.bar.front-end
+  .front-end
     .split .half:first-child
-      text-align: center
 
       margin-bottom: 10px
 
   section.bar.sidebar-content-split
-    margin-top: -45px
     .subnav, .shortlists
       display: block
     .shortlists
@@ -72,6 +34,7 @@
       padding: 0
       border: none
       margin-bottom: 20px
+      margin-top: -15px
       a
         display: inline-block
         padding-bottom: 5px
@@ -84,11 +47,10 @@
 
   section.bar.blog-listing
     .month
-      margin-bottom: 30px
       .label span
         margin: 0
         border: none
-        height: 20px
+        height: 15px
         text-align: left
         br
           display: none
@@ -97,4 +59,32 @@
         width: auto
         max-width: 100%
         display: block
-   
+
+
+@media screen and (max-width: 740px)
+  section.bar.front-end .split .half
+    display: block
+    text-align: center
+    padding: 0
+
+    .screenshot
+      margin-left: 3px
+      margin-bottom: 30px
+      text-align: center
+      width: auto
+    &:first-child
+      padding-right: 0
+    &:last-child
+      padding-left: 0
+      border: none
+      margin-left: 0
+
+      ul li
+        background: none
+        padding-left: 0
+        padding-bottom: 0
+        text-align: center
+  body section.textlist
+    .subnav, .shortlists
+      display: block
+    

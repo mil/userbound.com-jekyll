@@ -12,25 +12,15 @@ title: Blog
       {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
 
       {% if last_month != month && last_year != year %}
-        {% assign class = "pad" %}
-      {% else %}
-        {% assign class = "" %}
-      {% endif %}
-
-      {% if last_month != month && last_year != year %}
       {% if last_month != "" %}</div></div>{% endif %}
       
       <div class='month'>
-        <div class='label'>{{ post.date | date: "%B<br/>%Y" }}</div>
+        <div class='label'><span>{{ post.date | date: "%B<br/> %Y" }}</span></div>
         <div class='entries'>
       {% endif %}
 
 
-      <a class="{{ class }}" href="{{ post.url }}" title= '{{ post.date | date: "%m/%-d/%y" }}'>  
-        <span class='title'>
-          {{ post.title }}
-        </span>
-      </a>
+      <a href="{{ post.url }}" title= '{{ post.date | date: "%m/%-d/%y" }}'>{{ post.title }}</a>
 
       {% if last_month != month && last_year != year %}
       {% endif %}
