@@ -3,12 +3,12 @@
 <section class='bar pager'>
 {% if page.previous.categories contains 'art' %}
 <a href="{{ page.previous.url }}">&larr;</a>
+
 {% if page.next.url == nil %}
+<span class='separator'></span>
 <a class='blog' href="/blog">&beta;</a>
 {% endif %}
-
 {% endif %}
-
 
 {% if page.next.url %}
 <a href="{{ page.next.url }}">&rarr;</a>

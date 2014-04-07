@@ -2,7 +2,11 @@ section.bar.pager
   max-width: 100%
   text-align: right
   a
-    color: black
+    color: #7b7b7b
+    margin: 0 5px
+    &:hover
+      text-decoration: none
+      color: black
 
   button
     display: inline-block
@@ -12,18 +16,19 @@ section.bar.pager
     width: 20px
     height: 20px
     cursor: pointer
+    color: #7b7b7b
+
+    &:hover
+      color: black
   button.hidden
     content: ''
     opacity: 0
     cursor: none
 
   .blog
-    border-left: 1px dotted #cfcfcf
     font-size: 11px
-    margin-left: 10px
     font-weight: bold
-    padding-right: 5px
-    padding-left: 10px
+    margin: 0 5px
 
   .separator
     display: inline-block
