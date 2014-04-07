@@ -23,7 +23,7 @@ section.bar.front-end
       @include boxsize
       width: 49%
       &:first-child
-        padding-right: 60px
+        padding-right: 50px
         padding-top: 6px
         padding-bottom: 12px
         padding-left: 4px
@@ -37,6 +37,7 @@ section.bar.front-end
 
     .screenshot, .meta
       max-width: 100%
+      height: auto
 
     .meta
       vertical-align: middle
@@ -50,13 +51,22 @@ section.bar.front-end
           $vert_marg: 8px
           padding-top: $vert_marg
           padding-bottom: $vert_marg
-          padding-left: 24px
 
           text-align: left
           font-size: 18px
+          line-height: 20px
           font-family: Open Sans
           list-style: none
-          background: url('../images/icons/bullet_black.png') no-repeat left center
+          vertical-align: text-baseline
+
+          .bull
+            display: inline-block
+            width: 20px
+            line-height: 20px
+            font-size: 14px
+
+
+
 
     a.visit
       display: inline-block
@@ -64,8 +74,7 @@ section.bar.front-end
       font-size: 14px
       font-family: Open Sans
       &:hover
-        background: blue
-        color: white
+        text-decoration: underline
 
     .screenshot
       height: 200px
@@ -76,9 +85,10 @@ section.bar.front-end
       text-align: left
       vertical-align: middle
       border-left: 1px dotted #cfcfcf
-      padding-left: 60px
+      padding-left: 50px
       padding-top: 10px
       padding-bottom: 10px
       h2
         margin-bottom: 10px
         font-size: 30px
+        line-height: 36px
