@@ -14,7 +14,7 @@ title:
 
         <ul>
           {% for task in item.tasks %}
-          <li>{{ task }}</li>
+          <li><span class='bull'>&raquo;</span>{{ task }}</li>
           {% endfor %}
         </ul>
         <a class='visit' target='_blank' href="{{ item.link }}">Link</a>
