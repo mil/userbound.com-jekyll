@@ -11,7 +11,9 @@
   <nav>
     {% for link in site.navigation %}
       <a {% if page.url contains link.href %}class='active'{% endif %} href="{{ link.href }}">{{ link.text }}</a>
-      {% if forloop.last != true %}
+
+
+      {% if forloop.index == 1 or forloop.index == 2 %}
         <span class='seperator'></span>
       {% endif %}
     {% endfor %}

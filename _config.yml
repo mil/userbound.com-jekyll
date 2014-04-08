@@ -10,6 +10,8 @@ navigation:
     href: /interfaces
   - text: '&#9993'
     href: /art
+  - text: '&#946;'
+    href: /blog
 
 front_end:
   - title: Patrick Cars
@@ -50,7 +52,7 @@ front_end:
       - Graphics
       - Flash
 
-  - title: Indpendence PLC
+  - title: Independence PLC
     link: http://bmwoffreehold.com
     img: independence-plc.png
     tasks:
