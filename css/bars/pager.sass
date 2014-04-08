@@ -1,12 +1,15 @@
+$inactive_color: #212121
+$active_color: black
+
 section.bar.pager
   max-width: 100%
   text-align: right
   a
-    color: #7b7b7b
+    color: $inactive_color
     margin: 0 5px
     &:hover
       text-decoration: none
-      color: black
+      color: $active_color
 
   button
     display: inline-block
@@ -16,10 +19,10 @@ section.bar.pager
     width: 20px
     height: 20px
     cursor: pointer
-    color: #7b7b7b
+    color: $inactive_color 
 
     &:hover
-      color: black
+      color: $active_color
   button.hidden
     content: ''
     opacity: 0
