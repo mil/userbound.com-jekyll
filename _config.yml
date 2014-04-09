@@ -63,9 +63,9 @@ front_end:
     link: http://pro-headgolfblog.com
     img: prohead-golf-blog.png
     tasks:
-      - Templates
-      - Graphics
-      - Test
+      - Site Templates
+      - CMS Integration
+      - Blog Integration
   - title: Strand Center for the Arts
     link: http://strand.org
     img: strand.png
