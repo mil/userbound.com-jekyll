@@ -21,14 +21,15 @@ title: Blog
 
 
       <a href="{{ post.url }}" title= '{{ post.date | date: "%m/%-d/%y" }}'>{{ post.title }}</a>
-
-      {% if last_month != month && last_year != year %}
-      {% endif %}
+      
 
 
 
       {% assign last_month = month %} 
       {% assign last_year = year %} 
     {% endif %}
+      {% if forloop.last == true %}
+        </div></div>
+      {% endif %}
   {% endfor %}
 </section>
