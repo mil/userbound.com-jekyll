@@ -2,5 +2,5 @@ ErrorDocument 404 /404.html
 Options -Indexes
 
 RewriteEngine on
-RewriteRule ^/projects interfaces/$1
-RewriteRule ^/ui interfaces/$1
+Redirect /projects /interfaces
+Redirect /ui /interfaces
