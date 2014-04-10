@@ -85,7 +85,12 @@ section.sidebar-content-split
 
 
 // Indvidual Project Pages
-.project
+section.bar.project
+  max-width: 600px
+  width: 100%
+  h2
+    font-size: 36px
+    line-height: 40px
   h3
     margin-top: 35px
     padding-bottom: 0px
@@ -95,34 +100,38 @@ section.sidebar-content-split
     font-weight: 200
   p
     color: #3a3a3a
+    line-height: 22px
+    padding-top: 20px
+    padding-bottom: 20px
+
   .description
-    font-size: 15px
+    font-size: 16px
     color: #4f4f4f
     margin-bottom: 20px
     line-height: 24px
 
-// Individual Projects
-.ub-character
-  float: right
-  padding: 20px
-  padding-top: 60px
+  // Individual Projects
+  section.ub-character
+    float: right
+    padding: 20px
+    padding-top: 60px
 
-#keyboard
-  margin-top: 15px
-  width: 100%
-  border: 1px dotted #e8e8e8
-  background: #eeeeee
-  tr
-    margin: 10px
-    background: #e8e8e8
-    td
-      background: white
-      padding: 8px
-      text-align: center
-      border: 1px dashed #cccccc
-      margin: 5px
-      &.hit
-        background: #eeeeee
-      &.act
-        font-weight: bold
-        background: #cccccc
+  #keyboard
+    margin-top: 15px
+    width: 100%
+    border: 1px dotted #e8e8e8
+    background: #eeeeee
+    tr
+      margin: 10px
+      background: #e8e8e8
+      td
+        background: white
+        padding: 8px
+        text-align: center
+        border: 1px dashed #cccccc
+        margin: 5px
+        &.hit
+          background: #eeeeee
+        &.act
+          font-weight: bold
+          background: #cccccc
