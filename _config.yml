@@ -21,6 +21,15 @@ front_end:
       - Site Templates
       - Graphics 
 
+  - title: Plus Packaging
+    link: http://pluspackaging.com
+    img: plus-packaging.png
+    tasks:
+      - Site Templates
+      - Graphics
+      - Flash
+ 
+
   - title: Happy Mukti
     link: http://happymukti.com
     img: happy-mukti.png
@@ -36,14 +45,7 @@ front_end:
       - Site Templates
       - Graphics
 
-  - title: Plus Packaging
-    link: http://pluspackaging.com
-    img: plus-packaging.png
-    tasks:
-      - Site Templates
-      - Graphics
-      - Flash
-  
+ 
   - title: DCH Millburn Audi
     link: http://dchmillburnaudi.com
     img: dch-millburn-audi.png
