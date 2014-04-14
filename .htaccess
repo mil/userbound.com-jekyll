@@ -1,6 +1,9 @@
 ErrorDocument 404 /404.html
 Options -Indexes
 
+AddType text/plain .scad
+
 RewriteEngine on
 Redirect /projects /interfaces
 Redirect /ui /interfaces
+
