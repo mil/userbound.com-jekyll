@@ -6,5 +6,5 @@ AddType text/plain .scad
 RewriteEngine on
 Redirect /projects /interfaces
 Redirect /ui /interfaces
-Redirect /userbound /
+Redirect /interfaces/userbound /
 
