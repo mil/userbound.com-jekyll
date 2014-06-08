@@ -4,14 +4,10 @@ sass:
     style: compressed
 
 navigation:
-  - text: Front End
-    href: /front-end
-  - text: Interfaces
-    href: /interfaces
   - text: '&#9993;'
     href: /art
-  - text: '&#946;'
-    href: /blog
+  - text: Interfaces
+    href: /interfaces
 
 front_end:
   - title: Patrick Cars

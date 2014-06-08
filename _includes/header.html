@@ -13,7 +13,7 @@
       <a {% if page.url contains link.href %}class='active'{% endif %} href="{{ link.href }}">{{ link.text }}</a>
 
 
-      {% if forloop.index == 1 or forloop.index == 2 %}
+      {% if forloop.index == 1 %}
         <span class='seperator'></span>
       {% endif %}
     {% endfor %}
