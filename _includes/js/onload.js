@@ -80,7 +80,7 @@ function front_end_pager() {
 }
 
 /* For Interfaces Section */
-function sub_nav() {
+function interfaces_sub_nav() {
   $("nav.subnav a").on("click", function(e) {
     var target_section = ".shortlist#" + $(e.target).text().replace(" ", "-");
 
@@ -107,6 +107,6 @@ $(function($) {
     $(".fade-in").animate({'opacity': '1'}, 800);
   }
   if ($("nav.subnav").length > 0 ) {
-    sub_nav();
+    interfaces_sub_nav();
   }
 });
