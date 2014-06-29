@@ -83,6 +83,7 @@ function front_end_pager() {
 function interfaces_sub_nav() {
   $("nav.subnav a").on("click", function(e) {
     var target_section = ".shortlist#" + $(e.target).text().replace(" ", "-");
+   if ($(".shortlist.active").is(target_section)) { return; }
 
     $(".subnav a.active").removeClass("active");
     $(e.target).addClass("active");
